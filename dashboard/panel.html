@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		.monospace {
+			font-family: monospace;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		Hello, I'm a default panel that comes with a nodecg-react bundle!
+	</p>
+	<p>
+		You can play with me and directly update your stateful React graphics from here.
+	</p>
+	<p>
+		<button id="stamp">Timestamp!</button>
+	</p>
+	<p>
+		<label for="name">Craftsman name</label>
+		<input id="name" type="text" value="John Doe"/>
+		<button id="nameButton">Set name</button>
+	</p>
+	<script>
+		const timeButton = document.querySelector("#stamp")
+		const nameButton = document.querySelector("#nameButton")
+		const nameInput = document.querySelector("#name")
+
+
+		const timeReplicant = nodecg.Replicant('timestamp')
+		const nameReplicant = nodecg.Replicant('name')
+
+		timeButton.onclick = () => timeReplicant.value = Date.now()
+		nameButton.onclick = () => nameReplicant.value = nameInput.value
+	</script>
+</body>
+</html>
