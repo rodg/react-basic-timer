@@ -4,3 +4,6 @@ graphics/*.js
 graphics/*.js.map
 graphics/*.html
 .DS_Store
+dashboard/*.js*
+dashboard/*.html
+.parcel-cache

@@ -5,8 +5,7 @@
   "homepage": "",
   "author": {
     "name": "RodG",
-    "email": "",
-    "url": ""
+    "email": "rodg1300@gmail.com"
   },
   "files": [
     "dashboard",
@@ -44,15 +43,25 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.12.3"
+    "parcel": "^2.0.1"
   },
   "dependencies": {
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "use-nodecg": "^0.4.1-1"
   },
+  "targets": {
+    "graphics": {
+      "source": "src/graphics/index.html",
+      "distDir": "graphics"
+    },
+    "dashboard": {
+      "source": "src/dashboard/index.html",
+      "distDir": "dashboard"
+    }
+  },
   "scripts": {
-    "start": "parcel watch src/index.html -d graphics --public-url ./",
-    "build": "parcel build src/index.html -d graphics --public-url ./"
+    "start": "parcel watch src/graphics/index.html --dist-dir graphics --public-url ./",
+    "build": "parcel build src/graphics/index.html -d graphics --public-url ./"
   }
 }
