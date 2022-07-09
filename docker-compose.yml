@@ -1,0 +1,10 @@
+services:
+    nodecg:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        container_name: nodecg
+        volumes:
+            - ./:/nodecg/bundles/react-basic-timer/
+        ports:
+            - "9090:9090"

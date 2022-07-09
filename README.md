@@ -1,4 +1,15 @@
-test-bundle is a [NodeCG](http://github.com/nodecg/nodecg) bundle. 
-It works with NodeCG versions which satisfy this [semver](https://docs.npmjs.com/getting-started/semantic-versioning) range: `^1.1.1`
-You will need to have an appropriate version of NodeCG installed to use it.
+# React Basic Timer
+This is an example of how to setup a basic react nodecg bundle. Comes with dockerfile for running and testing the bundle.
 
+## Install
+For development it is helpful to run with `npm start` to have hot reloading.
+```bash
+npm install --force
+npm start
+```
+Build and start nodecg containers with:
+```bash
+docker compose up --build
+```
+
+The nodecg dashboard should then be available at `http://localhost:9090`
